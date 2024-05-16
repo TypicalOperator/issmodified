@@ -20,7 +20,9 @@ File System Script
 ## Step 2 - Run Command Prompt
 In command prompt run this
 ```cmd
-node Downloads\Incognito\fileSaving.js
+cd Downloads\Incognito
+npm i express fs copy-text-into-clipboard
+node fileSaving.js
 ```
 ## Step 3 - Run Roblox with Incognito
 ## Step 4 - Execute the Script
