@@ -7,8 +7,13 @@ const app = express();
 app.use(express.json());
 
 app.get('/readfile', (req, res) => {
-    let fileData = fs.readFileSync("workspace/" + req.query.path);
-    res.send(fileData);
+    const filePath = "workspace/" + req.query.path;
+    if (fs.existsSync(filePath)) {
+        let fileData = fs.readFileSync(filePath);
+        res.send(fileData);
+    } else {
+        res.status(404).send("File not found.");
+    }
 });
 
 app.get('/writefile', (req, res) => {
