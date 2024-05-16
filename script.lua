@@ -135,24 +135,38 @@ Global.request = function(url, method, body) -- kade
     return data
 end
 
+local HttpService = game:GetService("HttpService")
+
 Global.writefile = function(path, data)
-    local wer = game:HttpGet("http://localhost:8000/writefile?path="..path.."&data="..data)
-	return wer
+    local url = "http://localhost:8000/writefile?path="..path.."&data="..data
+    print("Requesting URL: " .. url)
+    local response = game:HttpGet(url)
+    print("Response: " .. response)
+    return response
 end
 
 Global.readfile = function(path)
-    local wer = game:HttpGet("http://localhost:8000/readfile?path="..path)
-	return wer
+    local url = "http://localhost:8000/readfile?path="..path
+    print("Requesting URL: " .. url)
+    local response = game:HttpGet(url)
+    print("Response: " .. response)
+    return response
 end
 
 Global.appendfile = function(path, data)
-    local wer = game:HttpGet("http://localhost:8000/appendfile?path="..path.."&data="..data)
-	return wer
+    local url = "http://localhost:8000/appendfile?path="..path.."&data="..data
+    print("Requesting URL: " .. url)
+    local response = game:HttpGet(url)
+    print("Response: " .. response)
+    return response
 end
 
 Global.setclipboard = function(text)
-    local wer = game:HttpGet("http://localhost:8000/setclipboard?text="..text)
-	return wer
+    local url = "http://localhost:8000/setclipboard?text="..text
+    print("Requesting URL: " .. url)
+    local response = game:HttpGet(url)
+    print("Response: " .. response)
+    return response
 end
 
 Global.printREALidentity = function()
