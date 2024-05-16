@@ -1,6 +1,11 @@
 # Incognito Script Support (modified)
 modified version of kade's incognito script support (requires node.js)
 
+# Loadstring
+```lua
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/TypicalOperator/issmodified/main/script.lua"))() -- Make sure to check the rest of the file (or it wont work)
+```
+
 # Original Creators:
 Kade, Pio, jxsh
 
