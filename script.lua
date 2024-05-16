@@ -136,19 +136,19 @@ Global.request = function(url, method, body) -- kade
 end
 
 Global.writefile = function(path, data)
-    print(game:HttpGet("http://localhost:8000/writefile?path="..path.."&data="..data))
+    game:HttpGet("http://localhost:8000/writefile?path="..path.."&data="..data)
 end
 
 Global.readfile = function(path)
-    print(game:HttpGet("http://localhost:8000/readfile?path="..path))
+    game:HttpGet("http://localhost:8000/readfile?path="..path)
 end
 
 Global.appendfile = function(path, data)
-    print(game:HttpGet("http://localhost:8000/appendfile?path="..path.."&data="..data))
+    game:HttpGet("http://localhost:8000/appendfile?path="..path.."&data="..data)
 end
 
 Global.setclipboard = function(text)
-    print(game:HttpGet("http://localhost:8000/setclipboard?text="..text))
+    game:HttpGet("http://localhost:8000/setclipboard?text="..text)
 end
 
 Global.printREALidentity = function()
