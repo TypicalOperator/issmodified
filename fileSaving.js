@@ -6,7 +6,6 @@ const path = require('path');
 const app = express();
 const workspaceDir = path.join(__dirname, 'workspace');
 
-// Ensure workspace directory exists
 if (!fs.existsSync(workspaceDir)) {
     fs.mkdirSync(workspaceDir, { recursive: true });
 }
@@ -34,7 +33,6 @@ app.get('/writefile', (req, res) => {
     const dirPath = path.dirname(filePath);
     
     try {
-        // Ensure the directory exists
         if (!fs.existsSync(dirPath)) {
             fs.mkdirSync(dirPath, { recursive: true });
         }
@@ -52,7 +50,6 @@ app.get('/appendfile', (req, res) => {
     const dirPath = path.dirname(filePath);
     
     try {
-        // Ensure the directory exists
         if (!fs.existsSync(dirPath)) {
             fs.mkdirSync(dirPath, { recursive: true });
         }
