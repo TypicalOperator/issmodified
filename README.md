@@ -17,6 +17,17 @@ File System Script
 
 # Installation
 ## Step 1 - Download required files
+All files must be in a folder called Incognito in Downloads
+Here's the format:
+```
+Incognito
+|-node_modules (only shows up once npm packages are installed)
+|-workspace (create yourself, required for file saving functions)
+|-fileSaving.js (download)
+|-package.json (only shows up once npm packages are installed)
+|-package-lock.json (only shows up once npm packages are installed)
+◟-script.lua (download)
+```
 ## Step 2 - Run Command Prompt
 In command prompt run this
 ```cmd
